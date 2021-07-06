@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TimerSettings from '../TimerSettings/TimerSettings.js';
 
 import './App.css';
 
@@ -16,10 +17,7 @@ function App() {
       <h1 class="timer__main">{sessionLength}:00</h1>
       <div class="timer__controls">
       </div>
-      <div class="timer__settings">
-        <div>Tomato Timer</div>
-
-      </div>
+      <TimerSettings />
     </div>
   );
 }

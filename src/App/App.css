@@ -20,16 +20,36 @@
   z-index: -1;
 }
 .timer__main {
-  font-size: 20vw;
+  font-size: 16vw;
   line-height: .9;
   margin: 0;
 }
 
 .timer__settings {
   position: absolute;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+
+.timer-settings__lengths {
+  display: flex;
+}
+
+.timer-settings__sessions {
+  border-right: 1px solid;
+  padding: 1rem;
+
+}
+
+.timer-settings__breaks {
+  padding: 1rem;
+
 }
