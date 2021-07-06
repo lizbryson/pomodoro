@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+
 import './App.css';
 
 function App() {
+
+  const [sessionLength, setSessionLength] = useState(25);
+  const [breakLength, setBreakLength] = useState(5);
+
+  document.title = sessionLength + ':00';
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="timer__progress-bar"></div>
+      <h1 class="timer__main">{sessionLength}:00</h1>
+      <div class="timer__controls">
+      </div>
+      <div class="timer__settings">
+        <div>Tomato Timer</div>
+
+      </div>
     </div>
   );
 }
+
 
 export default App;
