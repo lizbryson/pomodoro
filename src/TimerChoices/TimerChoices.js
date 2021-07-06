@@ -1,21 +1,29 @@
 import React from 'react';
+import './TimerChoices.css';
+import TimerChoice from '../TimerChoice/TimerChoice';
 
-const TimerChoices = () => {
+const TimerChoices = (props) => {
+
+  const handleChange = ({ target }) => {
+    // alert(target.value);
+    props.setSessionLength(target.value);
+  }
+
   return (
-    <form class="timer-settings__choices">
-        <label for="sessions_5">
-          5
-          <input id="sessions_5" name="session" type="radio" value="5" />
-        </label>
-        <label for="sessions_10">
-          10
-          <input id="sessions_10" name="session" type="radio" value="10" />
-        </label>
-        <label for="sessions_15">
-          15
-          <input id="sessions_15" name="session" type="radio" value="15" />
-        </label>
-      </form>
+    <form class="timer-settings__choices" onChange={handleChange}>
+      <TimerChoice step="5" selected="false" />
+      <TimerChoice step="10" selected="false" />
+      <TimerChoice step="15" selected="false" />
+      <TimerChoice step="20" selected="false" />
+      <TimerChoice step="25" selected="true" />
+      <TimerChoice step="30" selected="false" />
+      <TimerChoice step="35" selected="false" />
+      <TimerChoice step="40" selected="false" />
+      <TimerChoice step="45" selected="false" />
+      <TimerChoice step="50" selected="false" />
+      <TimerChoice step="55" selected="false" />
+      <TimerChoice step="60" selected="false" />
+    </form>
   )
 }
 

@@ -17,7 +17,9 @@ function App() {
       <h1 class="timer__main">{sessionLength}:00</h1>
       <div class="timer__controls">
       </div>
-      <TimerSettings />
+      <TimerSettings
+        sessionLength={ sessionLength }
+        setSessionLength={setSessionLength} />
     </div>
   );
 }

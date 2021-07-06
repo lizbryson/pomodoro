@@ -1,0 +1,42 @@
+.timer-settings__choices {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  border: 1px solid;
+  /* border-left: 1px solid; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5rem .5rem 1.25rem .5rem;
+  transform: translate(1px, -100%);
+}
+
+.timer-settings__choices label {
+  width: 33.333%;
+  text-align: center;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.timer-settings__choices input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.timer-settings__choices span {
+  display: inline-block;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: #f7f7f7;
+}
+
+.timer-settings__choices input:checked + span {
+  background-color: tomato;
+}

@@ -46,6 +46,7 @@
 .timer-settings__sessions {
   border-right: 1px solid;
   padding: 1rem;
+  position: relative;
 
 }
 
